@@ -1,0 +1,13 @@
+
+.done {
+  text-decoration: line-through;
+}
+
+.listItem{
+  width: 200px;
+  display: flex;
+}
+
+.deleteButton{
+  margin-left: auto;
+}
