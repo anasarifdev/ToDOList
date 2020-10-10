@@ -38,7 +38,16 @@ function createListElement2(){
 	input.value = "";
 }
 
+function deleteListElement(element){
+	var button = element.target;
+	var itemToDelete = button.parentElement.parentElement;
 
+
+	if(element.target && element.target.nodeName === "BUTTON" && element.target.className === "deleteButton"){
+		//console.log("deleteee");
+		itemToDelete.parentElement.removeChild(itemToDelete);
+	}
+}
 
 function addListAfterClick() {
 	if (inputLength() > 0) {
