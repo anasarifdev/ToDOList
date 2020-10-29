@@ -66,12 +66,20 @@ function crossListItem(element){
 	var divItem = listItem.children[0];
 
 	if(element.target && element.target.nodeName === "SPAN") {
-		//console.log(element.target);
-		//console.log(element.target.nodeName);
-		//console.log(element.target.innerText + " was clicked");
 		element.target.classList.toggle("done");
 	}
 
+}
+
+function deletListElement(element){
+	var button = element.target;
+	var itemToDelete = button.parentElement.parentElement;
+
+
+	if(element.target && element.target.nodeName === "BUTTON" && element.target.className === "deleteButton"){
+		//console.log("deleteee");
+		itemToDelete.parentElement.removeChild(itemToDelete);
+	}
 }
 
 //Event Listeners
